@@ -1,6 +1,10 @@
 html {
   background-size: cover;
 }
+html, body { 
+  height: 100%; 
+  width: 100%; 
+}
 
 h1 {
   font-style: oblique;
@@ -39,6 +43,7 @@ body {
   height: 148px;
   width: 100%;
   min-width: 400px;
+  text-decoration: none;
 }
 @media all and (max-width: 885px) {
   .bx--tile {
@@ -82,4 +87,8 @@ h4 {
   font-weight: bold;
   font-size: 16px;
   background-color: #B7B0B0;
+}
+
+form {
+  display: none;
 }

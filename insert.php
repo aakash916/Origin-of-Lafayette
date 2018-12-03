@@ -1,24 +1,25 @@
 <?php
 	ob_start();
-	//$con = mysqli_connect('128.46.154.25', 'epics_disc', 'TcbridxS');
+	$con = mysqli_connect('128.46.154.25', 'epics_disc', 'TcbridxS');
 
-	$con = mysqli_connect('127.0.0.1', 'root', 'epicsDisc1');  // For local host dev
-	if(!$con)
+	//$con = mysqli_connect('127.0.0.1', 'root', 'epicsDisc1');  // For local host dev
+	
+	/*if(!$con)
 	{
 		echo 'Connection to database could not be established';
 	}
 	else {
 		echo 'connected to database';
 	}
-
+	
 /// To remove : Local host development
 	if(!mysqli_select_db($con,'buildingData'))
 	{
 		echo 'Database not Selected';
 	}
 ////
+*/
 
-/*
 /// For final version
 	if(!mysqli_select_db($con,'epics_disc'))
 	{
@@ -26,7 +27,7 @@
 	}
 	# Add code for District (dropdown) and architect
 /////
-*/
+
 
 ///// start here
 	$District = $_POST['district'];

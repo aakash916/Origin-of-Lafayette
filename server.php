@@ -8,18 +8,22 @@
 	$_SESSION['success'] = "";
 
 	// connect to database
-	$db = mysqli_connect('127.0.0.1', 'root', 'epicsDisc1');
+	$db = mysqli_connect('128.46.154.25', 'epics_disc', 'TcbridxS');
+	if(!mysqli_select_db($db,'epics_disc'))
+	{
+		echo 'Database not Selected';
+	}
+	
+	//LOCALHIOST
+	//$db = mysqli_connect('127.0.0.1', 'root', 'epicsDisc1');
 	// THIS STATEMENT WILL CHANGE ^^
 	
-	/*
+	
 	if(!$db	)
 	{
 		echo 'Connection to database could not be established';
 	}
-	else {
-		echo 'connected to database';
-	}
-	*/
+
 	
 	// REGISTER USER
 	if (isset($_POST['reg_user'])) {
@@ -69,8 +73,6 @@
 
 	}
 
-	// ... 
-
 	// LOGIN USER
 	if (isset($_POST['login_user'])) {
 		$username = mysqli_real_escape_string($db, $_POST['username']);
@@ -87,13 +89,13 @@
 
 			$password = md5($password);
 			$query1 = "USE buildingData;";
-
+/*
 			if(!mysqli_query($db,$query1))
 			{
 				echo 'Not able to select database';
 				echo("Error description: " . mysqli_error($db));
 			} 
-
+*/
 			$query = "SELECT * FROM users WHERE userName='$username' AND pwd='$password'";
 			$results = mysqli_query($db, $query);
 			if(!mysqli_query($db, $query)) {

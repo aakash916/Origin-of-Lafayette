@@ -28,10 +28,13 @@
 			<button type="submit" class="btn" name="login_user">Login</button>
 		</div>
 		<p>
-			Not yet a member? <a href="register.php">Sign up</a>
+			Not yet a member? <a href="register.php">Sign up</a> <br>
+			Not an authorized user? <a href="index.php">Go Back</a>
 		</p>
 	</form>
 
 
 </body>
+
+
 </html>
