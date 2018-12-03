@@ -3,11 +3,17 @@
 <html>
 <head>
 	<title>Registration system PHP and MySQL</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-	<h1 id="maintitle">Origin of Lafayette</h1>
+	<div class="titleInfo">
+		<h1>Origin of Lafayette</h1>
+  			<div class="hr-sect">
+  				The Lafayette Economic Association
+  			</div>
+	</div>
 		
 	<div class="header">
 		<h2>Register</h2>

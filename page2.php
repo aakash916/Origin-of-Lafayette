@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet' href='https://unpkg.com/carbon-components@latest/css/carbon-components.css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <link rel="stylesheet" href="css/pg2.css">  
   <script  src="js/pg2.js"></script>
@@ -19,7 +20,9 @@
 <div class="rectangle"></div>
 
 </body>
-<h1 style="text-align:center;">St. Mary's Historical District</h1>
+<div class="titleInfo">
+	<h1>St. Mary's Historical District</h1>
+</div>
 <p>
 The St. Mary’s Historic District lies just southeast of the Centennial Historic District. As Lafayette expanded to the north, the St. Mary’s area became a popular place to live for the city’s wealthier citizens, especially along Columbia Street district’s primary thoroughfare. 
 <br>

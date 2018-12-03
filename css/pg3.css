@@ -330,3 +330,27 @@ tr:hover {background-color: #ddd;}
     display: none;
     border-radius: 6px;
 }
+
+.titleInfo {
+  text-align: center;
+  padding-bottom: 30px;
+
+}
+#pageTitle { color: #111; 
+     font-family: "Roboto", "Helvetica Neue, Helvetica, Arial", sans-serif;
+     font-size: 64px; 
+     background-color: rgba(248, 221, 200, 0.7);
+     width: 100%;
+     font-weight: 550; 
+     line-height: 64px; 
+     margin: 0 0 0; 
+     padding: 20px 30px; 
+     text-align: center; 
+     text-transform: uppercase; 
+     display:inline-block;
+}
+
+.titleInfo {
+  width: 100%%;
+  float: center;
+}

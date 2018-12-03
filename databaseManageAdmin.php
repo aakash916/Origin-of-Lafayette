@@ -18,11 +18,13 @@
 
 <body>
 	<div class="rectangle"></div>
-	<h1 id="pagetitle" style="text-align:center;">St. Mary's Historical District</h1>
+	<div id="titleInfo">
+	<h1 id="pageTitle">St. Mary's Historical District</h1>
+	</div>
 	
 	<figure>
 		<img id="districtMap" src="images/stMarysMap.jpg">
-		<figcaption>Fig - District Map based on Site Numbers</figcaption>
+		<figcaption>District Map based on Site Numbers</figcaption>
 	</figure>
 	<br>
 	<br>

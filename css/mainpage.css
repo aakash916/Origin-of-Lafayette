@@ -31,11 +31,25 @@ a{
 	text-decoration: none;
 	color: #0d1621;
 	}
-h1{
-	text-align: center;
-	font-style: oblique;
-	font-size:64px
+.titleInfo {
+  text-align: center;
+  padding-bottom: 30px;
+
 }
+
+h1 { color: #111; 
+     font-family: "Roboto", "Helvetica Neue, Helvetica, Arial", sans-serif;
+     font-size: 64px; 
+     width: 50%;
+     font-weight: 700; 
+     line-height: 64px; 
+     margin: 0 0 0; 
+     padding: 20px 30px; 
+     text-align: center; 
+     text-transform: uppercase; 
+     display:inline-block;
+}
+
 table{
 	border: 1px solid black;
 	width:25%;
@@ -106,4 +120,23 @@ td{
 .inside {
   width: 40%;
   margin: 0 auto;
+}
+
+.hr-sect {
+  display: inline-flex;
+  width: 50%;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
 }
