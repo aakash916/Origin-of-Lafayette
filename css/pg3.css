@@ -354,3 +354,28 @@ tr:hover {background-color: #ddd;}
   width: 100%%;
   float: center;
 }
+
+
+footer {
+  padding-top: 30px;
+  background-color: #5F9EA0;
+}
+.col-md-12 {
+  text-align: center;
+}
+
+#footerText {
+  font-size:17px;
+}
+
+
+#modalB {
+  height: 200px;
+}
+
+#modalC {
+  height: 200px;
+}
+#modalD {
+  height: 200px;
+}

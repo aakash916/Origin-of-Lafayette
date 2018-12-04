@@ -96,13 +96,14 @@
 	
 	if (mysqli_num_rows($results)>0) {
 		while($row=mysqli_fetch_array($results)) {
-			echo "<tr image_data='images/bldgImages/".$row['Images']."'><td> <div class='row_data'>". $row[1] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[3] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[4] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[5] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[6] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[7] .
-				"</div></td><td> <div class='row_data' edit_type='click'>". $row[8] . 
+			echo "<tr image_data='images/bldgImages/".$row['Images']."'>
+					<td> <div class='row_data' col_name='SiteNumber'>". $row[1] ."</div></td>
+				<td> <div class='row_data' edit_type='click' col_name='Name'>". $row[3] .
+				"</div></td><td> <div class='row_data' edit_type='click' col_name='StreetAddress'>". $row[4] .
+				"</div></td><td> <div class='row_data' edit_type='click' col_name='Location'>". $row[5] .
+				"</div></td><td> <div class='row_data' edit_type='click' col_name='Ranking'>". $row[6] .
+				"</div></td><td> <div class='row_data' edit_type='click' col_name='Architecture'>". $row[7] .
+				"</div></td><td> <div class='row_data' edit_type='click' col_name='Year'>". $row[8] . 
 				"</div></td><td> 
 			<button type='button' class='btn btn-link' data-toggle='modal' id='button-view' data-target='.bd-example-modal-lg'> View </button>
 			</td><td> <span class='btn_edit' > <a href='#'' class='btn btn-link'> Edit</a> </span>
@@ -129,7 +130,7 @@ mysqli_close($con);
 	        </button>
 	      </div>
 	      <div class="modal-body">
-				<img class="col-9 col-md-9" id="modalImage"  src="images/stMarysMap.jpg">
+				<img class="col-6 col-md-6" id="modalImage"  src="images/stMarysMap.jpg">
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

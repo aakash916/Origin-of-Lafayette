@@ -7,79 +7,64 @@ $(document).on('ready', function () {
 	$(document).find('.btn_cancel').hide(); 
 
 
- 	// Open modal for adding new transaction. 
-	$("#managedb").on("click", function(event) {
-	    event.preventDefault();
-	    $('#darkenBackground').show();
-	    $("body").css("overflow", "hidden");
-	    $('#transactionForm').slideDown();
-	}); 
+	$(document).on('click', '.btn_edit', function(event) 
+	{
+		event.preventDefault();
+		var tbl_row = $(this).closest('tr');
 
-	$("#darkenBackground").on("click", function(event) {
-	 	event.preventDefault();
-	 	$('#darkenBackground').hide();
-	 	$('#transactionForm').slideUp();
-	  	$("body").css("overflow", "visible");
+		//var row_id = tbl_row.attr('row_id');
+
+		tbl_row.find('.btn_save').show();
+		tbl_row.find('.btn_cancel').show();
+
+		//hide edit button
+		tbl_row.find('.btn_edit').hide(); 
+
+		//make the whole row editable
+		tbl_row.find('.row_data')
+		.attr('contenteditable', 'true')
+		.attr('edit_type', 'button')
+		.addClass('bg-warning')
+		.css('padding','3px')
+		//.css('background-color', '#FEEFB3')
+
+		//--->add the original entry > start
+		tbl_row.find('.row_data').each(function(index, val) 
+		{  
+			//this will help in case user decided to click on cancel button
+			$(this).attr('original_entry', $(this).html());
+		}); 		
+		//--->add the original entry > end
+
 	});
 
-$(document).on('click', '.btn_edit', function(event) 
-{
-	event.preventDefault();
-	var tbl_row = $(this).closest('tr');
+	$(document).on('click', '.btn_cancel', function(event) 
+	{
+		event.preventDefault();
 
-	//var row_id = tbl_row.attr('row_id');
+		var tbl_row = $(this).closest('tr');
 
-	tbl_row.find('.btn_save').show();
-	tbl_row.find('.btn_cancel').show();
+		var row_id = tbl_row.attr('row_id');
 
-	//hide edit button
-	tbl_row.find('.btn_edit').hide(); 
+		//hide save and cacel buttons
+		tbl_row.find('.btn_save').hide();
+		tbl_row.find('.btn_cancel').hide();
 
-	//make the whole row editable
-	tbl_row.find('.row_data')
-	.attr('contenteditable', 'true')
-	.attr('edit_type', 'button')
-	.addClass('bg-warning')
-	.css('padding','3px')
-	//.css('background-color', '#FEEFB3')
+		//show edit button
+		tbl_row.find('.btn_edit').show();
 
-	//--->add the original entry > start
-	tbl_row.find('.row_data').each(function(index, val) 
-	{  
-		//this will help in case user decided to click on cancel button
-		$(this).attr('original_entry', $(this).html());
-	}); 		
-	//--->add the original entry > end
+		//make the whole row editable
+		tbl_row.find('.row_data')
+		.attr('contenteditable', 'false')
+		//.attr('edit_type', 'click')	 
+		.removeClass('bg-warning')
+		.css('padding','')
 
-});
-
-$(document).on('click', '.btn_cancel', function(event) 
-{
-	event.preventDefault();
-
-	var tbl_row = $(this).closest('tr');
-
-	var row_id = tbl_row.attr('row_id');
-
-	//hide save and cacel buttons
-	tbl_row.find('.btn_save').hide();
-	tbl_row.find('.btn_cancel').hide();
-
-	//show edit button
-	tbl_row.find('.btn_edit').show();
-
-	//make the whole row editable
-	tbl_row.find('.row_data')
-	.attr('contenteditable', 'false')
-	//.attr('edit_type', 'click')	 
-	.removeClass('bg-warning')
-	.css('padding','')
-
-	tbl_row.find('.row_data').each(function(index, val) 
-	{   
-		$(this).html( $(this).attr('original_entry') ); 
-	});  
-});
+		tbl_row.find('.row_data').each(function(index, val) 
+		{   
+			$(this).html( $(this).attr('original_entry') ); 
+		});  
+	});
 
 	$(document).on('click', '#button-view', function(event) 
 	{
@@ -88,29 +73,65 @@ $(document).on('click', '.btn_cancel', function(event)
 
 		var row_id = tbl_row.attr('image_data'); 
 		console.log(row_id);
-		console.log('hellogello');
 		document.getElementById("modalImage").src = row_id;
 
 	});
 
-	$(".js-select2").each(function(){
-		$(this).select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $(this).next('.dropDownSelect2')
-		});
+//--->save whole row entery > start	
+	$(document).on('click', '.btn_save', function(event) 
+	{
+		event.preventDefault();
+		var tbl_row = $(this).closest('tr');
+
+		var row_id = tbl_row.attr('row_id');
+
+		
+		//hide save and cacel buttons
+		tbl_row.find('.btn_save').hide();
+		tbl_row.find('.btn_cancel').hide();
+
+		//show edit button
+		tbl_row.find('.btn_edit').show();
 
 
-		$(".js-select2").each(function(){
-			$(this).on('select2:close', function (e){
-				if($(this).val() == "Please chooses") {
-					$('.js-show-service').slideUp();
-				}
-				else {
-					$('.js-show-service').slideUp();
-					$('.js-show-service').slideDown();
-				}
-			});
+		//make the whole row editable
+		tbl_row.find('.row_data')
+		.attr('contenteditable', 'false')
+		//.attr('edit_type', 'click')	
+		.removeClass('bg-warning')
+		.css('padding','')
+		.addClass('bg-success')
+
+
+		//--->get row data > start
+		var arr = {}; 
+		tbl_row.find('.row_data').each(function(index, val) 
+		{   
+			var col_name = $(this).attr('col_name');  
+			var col_val  =  $(this).html();
+			arr[col_name] = col_val;
 		});
-	})
+		//--->get row data > end
+
+
+		//use the "arr"	object for your ajax call
+    	console.log(JSON.stringify(arr));
+		//$.extend(arr, {row_id:row_id});
+
+		//out put to show
+		//$('.post_msg').html( '<pre class="bg-success">'+JSON.stringify(arr, null, 2) +'</pre>')
+		//request = $.ajax({
+    	//	url: "/form.php",
+    	//	type: "post",
+    	//	data: data
+  		//}); 
+  		$.post("form.php", arr);
+  		/*
+  	    $.ajax({url: "/form.php", data: arr, success: function(result){
+            console.log('SUCCESSYAYAYAYAYAYAYAYAY');
+        }});
+		*/
+	});
+	//--->save whole row entery > end
 
 });

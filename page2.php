@@ -6,6 +6,7 @@
   <title>St. Mary's</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel='stylesheet' href='https://unpkg.com/carbon-components@latest/css/carbon-components.css'>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -91,13 +92,32 @@ The James Murdock House (31026) also located on Columbia Street was constructed 
 			</div>
 		</div>
 </div>
-	
-	<h4 style="text-align:center;" >Email:</h4>
-	<h4 style="text-align:center;" >	Phone: 765-807-1000</h4>
-	<h4 style="text-align:center;" > 20 N 6th Street Lafayette, IN 47901 </h4>
-	<h4 style="text-align:center;" >2018 City of Lafayette. All rights reserved.</h4>
 
+<br>
+<br>
 
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+    <!-- Footer Text -->
+        <!-- Grid column -->
+        <div class="col-md-12">
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold" id="footerTextTitle">Contact Us</h5>
+          <h6 class="font-weight-normal" id="footerText">Phone: 765-807-1000</h6>
+          <h6 class="font-weight-normal" id="footerText">Email: jcollier@lafayette.in.gov</h6>
+          <h6 class="font-weight-normal" id="footerText">Address: 20 N 6th Street Lafayette, IN 47901</h6>
+    	  <h6 class="font-weight-normal" id="footerText">Website:<a id="footerText" href="https://www.lafayette.in.gov/187/Economic-Development" target="_blank"> Lafayette Economic Association</a></h6>
+
+          
+        </div>
+    <!-- Footer Text -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://engineering.purdue.edu/EPICS" id="footerText" target="_blank"> Purdue EPICS</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+  <!-- Footer -->
 	<?php
 		if(isset($_POST['submit'])){
 		$ranking=$_POST["ranking"];

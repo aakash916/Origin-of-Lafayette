@@ -177,6 +177,31 @@
 	  </div>
 	</div>
 
+<br>
+<br>
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+    <!-- Footer Text -->
+        <!-- Grid column -->
+        <div class="col-md-12">
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
+          <h6 class="font-weight-normal">Phone: 765-807-1000</h6>
+          <h6 class="font-weight-normal">Email: jcollier@lafayette.in.gov</h6>
+          <h6 class="font-weight-normal">Address: 20 N 6th Street Lafayette, IN 47901</h6>
+    	  <h6 class="font-weight-normal">Website:<a id="footerText" href="https://www.lafayette.in.gov/187/Economic-Development" target="_blank"> Lafayette Economic Association</a></h6>
+        </div>
+    <!-- Footer Text -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://engineering.purdue.edu/EPICS" id="footerText" target="_blank"> Purdue EPICS</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+  <!-- Footer -->
+
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

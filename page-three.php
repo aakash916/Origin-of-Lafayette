@@ -133,7 +133,7 @@ mysqli_close($con);
         </button>
       </div>
       <div class="modal-body">
-			<img class="col-9 col-md-9" id="modalImage"  src="images/stMarysMap.jpg">
+			<img class="col-6 col-md-6" id="modalImage"  src="images/stMarysMap.jpg">
 
       </div>
       <div class="modal-footer">
@@ -142,6 +142,9 @@ mysqli_close($con);
     </div>
   </div>
 </div>
+<br>
+<br>
+
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
