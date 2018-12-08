@@ -28,8 +28,6 @@
 	# Add code for District (dropdown) and architect
 /////
 
-
-///// start here
 	$District = $_POST['district'];
 	$Name = $_POST['buildingName'];
 	$Site = $_POST['siteNumber'];

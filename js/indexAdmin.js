@@ -1,5 +1,4 @@
-//CarbonComponents.settings.disableAutoInit = true;
-//	CarbonComponents.Tile.init();
+
 
 $(document).on('ready', function () {
 
@@ -115,22 +114,8 @@ $(document).on('ready', function () {
 
 
 		//use the "arr"	object for your ajax call
-    	console.log(JSON.stringify(arr));
-		//$.extend(arr, {row_id:row_id});
-
-		//out put to show
-		//$('.post_msg').html( '<pre class="bg-success">'+JSON.stringify(arr, null, 2) +'</pre>')
-		//request = $.ajax({
-    	//	url: "/form.php",
-    	//	type: "post",
-    	//	data: data
-  		//}); 
   		$.post("form.php", arr);
-  		/*
-  	    $.ajax({url: "/form.php", data: arr, success: function(result){
-            console.log('SUCCESSYAYAYAYAYAYAYAYAY');
-        }});
-		*/
+
 	});
 	//--->save whole row entery > end
 

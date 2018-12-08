@@ -1,3 +1,4 @@
+<!-- The purpose of this file is to connect to our EPICS remote database and upload images for testing purposes. The add building form currently does not have a separate field to attach building images. The contents of this file will be used to design that field. Once this is integrated into the main AddBuilding.html file this file can be deleted -->
 <?php
   // Create database connection
   //$db = mysqli_connect("localhost", "root", "", "image_upload");
@@ -6,8 +7,6 @@
   if(!mysqli_select_db($db,'epics_disc'))
   {
     echo 'Database not Selected';
-  } else {
-    echo 'YAYAYAYAY';
   }
 
   // Initialize message variable
@@ -125,31 +124,6 @@
 </div>
 
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
